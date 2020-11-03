@@ -12,7 +12,7 @@ public class RegistroContenido {
 		Show MisShows[]= new Show[n];
 		
 		System.out.println("git update"+2);
-		
+		System.out.println("git update in features"+2);
 		
 		for (int i=0;i<n;i++) {
 			String nombre=JOptionPane.showInputDialog("Nombre Show: "+(i+1));
