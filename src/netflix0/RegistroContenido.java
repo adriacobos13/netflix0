@@ -11,6 +11,7 @@ public class RegistroContenido {
 		//lista de shows que se iran etiquetando en las diferentes clases hijas.
 		Show MisShows[]= new Show[n];
 		
+		System.out.println("git update"+2);
 		
 		
 		for (int i=0;i<n;i++) {
