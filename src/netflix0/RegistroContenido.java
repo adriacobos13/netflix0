@@ -13,6 +13,7 @@ public class RegistroContenido {
 		
 		System.out.println("git update"+2);
 		
+		
 		for (int i=0;i<n;i++) {
 			String nombre=JOptionPane.showInputDialog("Nombre Show: "+(i+1));
 			String fecha=JOptionPane.showInputDialog("fecha visualización: ");
