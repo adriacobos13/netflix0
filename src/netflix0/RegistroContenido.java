@@ -13,7 +13,7 @@ public class RegistroContenido {
 		
 		System.out.println("git update"+2);
 		System.out.println("git update in features"+2);
-		System.out.println("git update in master"+2);
+		System.out.println("git update in feature");
 		
 		for (int i=0;i<n;i++) {
 			String nombre=JOptionPane.showInputDialog("Nombre Show: "+(i+1));
