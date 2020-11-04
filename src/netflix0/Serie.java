@@ -4,25 +4,25 @@ public class Serie extends Show {
 	private String estudio;
 	private int temporadas;
 	private int[] valoraciones;
-	private int valoracion;
+
 	
 	
 	//metodos constructores
 	public Serie(String nombre, String fecha, int id, String estudio, int temporadas) {
-		super(nombre, fecha, id);
+		super(nombre, fecha, id,id);
 		this.estudio=estudio;
 		this.temporadas=temporadas;
 	}
 
 	public Serie(String nombre, String fecha, int id,int[] valoraciones , String estudio, int temporadas) {
-		super(nombre, fecha,id);
+		super(nombre, fecha,id,id);
 		this.estudio=estudio;
 		this.temporadas=temporadas;
 		this.valoraciones=valoraciones;
 	}
 
 	public Serie(String nombre, String fecha, int id,int valoracion , String estudio, int temporadas) {
-		super(nombre, fecha,id);
+		super(nombre, fecha,id,valoracion);
 		this.estudio=estudio;
 		this.temporadas=temporadas;
 		this.valoracion=valoracion;
@@ -53,14 +53,7 @@ public class Serie extends Show {
 		this.valoraciones = valoraciones;
 	}
 
-	public int getValoracion() {
-		return valoracion;
-	}
 
-	public void setValoracion(int valoracion) {
-		this.valoracion = valoracion;
-	}
-	
 	//mostramos datos con o sin valoracion o valoraciones
 	public String mostrarDatos() {
 		return "Nombre: "+nombre+ "\nFecha: "+fecha+

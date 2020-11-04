@@ -4,20 +4,20 @@ public class Pelicula extends Show{
 	//atributos
 	private String director;
 	private String publicacion;
-	private int valoracion;
+	
 	
 	//Metodo constructor 1
 	public Pelicula(String nombre, String fecha, int id, String director, String publicacion, int valoracion) {
-		super(nombre,fecha,id);
+		super(nombre,fecha,id, valoracion);
 		this.director=director;
 		this.publicacion=publicacion;
-		this.valoracion=valoracion;
+		
 	
 	}
 	
 	//Metodo constructor 2 sin valoracion
 	public Pelicula(String nombre, String fecha, int id, String director, String publicacion) {
-		super(nombre,fecha,id);
+		super(nombre,fecha,id,id);
 		this.director=director;
 		this.publicacion=publicacion;
 		
@@ -46,14 +46,8 @@ public class Pelicula extends Show{
 	}
 
 
-	public int getValoracion() {
-		return valoracion;
-	}
 
 	
-	public void setValoracion(int valoracion) {
-		this.valoracion = valoracion;
-	}
 	//mostramos datos con o sin valoracion
 	public String mostrarDatos() {
 		return "Nombre: "+nombre+ "\nFecha: "+fecha+
