@@ -4,11 +4,11 @@ public class Documental extends Show{
 	//atributos documental  
 	private String director;
 	private String publicacion;
-	private int valoracion;
+	
 	
 	//metodo constructor 1 con valoracion
 	public Documental(String nombre, String fecha, int id, String director, String publicacion, int valoracion) {
-		super(nombre,fecha,id);
+		super(nombre,fecha,id,valoracion);
 		this.director=director;
 		this.publicacion=publicacion;
 		this.valoracion=valoracion;
@@ -16,10 +16,9 @@ public class Documental extends Show{
 	}
 	//metodo constructor 1 sin valoracion
 	public Documental(String nombre, String fecha, int id, String director, String publicacion) {
-		super(nombre,fecha,id);
+		super(nombre,fecha,id, id);
 		this.director=director;
 		this.publicacion=publicacion;
-		
 	
 	}
 	
@@ -44,14 +43,7 @@ public class Documental extends Show{
 	}
 
 
-	public int getValoracion() {
-		return valoracion;
-	}
-
-
-	public void setValoracion(int valoracion) {
-		this.valoracion = valoracion;
-	}
+	
 	//mostramos datos con o sin valoracion
 	public String mostrarDatos() {
 		return "Nombre: "+nombre+ "\nFecha: "+fecha+

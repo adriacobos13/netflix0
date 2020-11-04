@@ -4,8 +4,10 @@ public class Show {
 	protected String nombre;
 	protected String fecha;
 	protected int id;
+	protected int valoracion;
 	
-	public Show(String nombre,String fecha,int id) {
+	
+	public Show(String nombre,String fecha,int id, int valoracion) {
 		
 		this.fecha=fecha;
 		this.nombre=nombre;
@@ -40,6 +42,17 @@ public class Show {
 		this.fecha = fecha;
 	}
 
+
+	public int getValoracion() {
+		return valoracion;
+	}
+
+
+	public void setValoracion(int valoracion) {
+		this.valoracion = valoracion;
+	}
+	
+	
 	
 		
 	
