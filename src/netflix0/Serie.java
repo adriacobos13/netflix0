@@ -1,5 +1,7 @@
 package netflix0;
 
+import java.time.LocalDateTime;
+
 public class Serie extends Show {
 	private String estudio;
 	private int temporadas;
@@ -8,20 +10,20 @@ public class Serie extends Show {
 	
 	
 	//metodos constructores
-	public Serie(String nombre, String fecha, int id, String estudio, int temporadas) {
+	public Serie(String nombre, LocalDateTime fecha, int id, String estudio, int temporadas) {
 		super(nombre, fecha, id,id);
 		this.estudio=estudio;
 		this.temporadas=temporadas;
 	}
 
-	public Serie(String nombre, String fecha, int id,int[] valoraciones , String estudio, int temporadas) {
+	public Serie(String nombre, LocalDateTime fecha, int id,int[] valoraciones , String estudio, int temporadas) {
 		super(nombre, fecha,id,id);
 		this.estudio=estudio;
 		this.temporadas=temporadas;
 		this.valoraciones=valoraciones;
 	}
 
-	public Serie(String nombre, String fecha, int id,int valoracion , String estudio, int temporadas) {
+	public Serie(String nombre, LocalDateTime fecha, int id,int valoracion , String estudio, int temporadas) {
 		super(nombre, fecha,id,valoracion);
 		this.estudio=estudio;
 		this.temporadas=temporadas;
