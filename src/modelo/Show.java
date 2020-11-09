@@ -1,24 +1,25 @@
-package netflix0;
+package modelo;
 
 import java.time.LocalDateTime;
 
 public abstract class Show {
 	protected String nombre;
-	protected LocalDateTime fecha;
+	protected LocalDateTime fechaVisionado;
+	protected LocalDateTime fechaPublicacion;
 	protected int id;
 	protected Integer valoracion;
 
-	public Show(String nombre, LocalDateTime fecha, int id, Integer valoracion) {
+	public Show(String nombre, LocalDateTime fechaVisionado, int id, Integer valoracion,LocalDateTime fechaPublicacion) {
 
-		this.fecha = fecha;
+		this.fechaVisionado = fechaVisionado;
 		this.nombre = nombre;
 		this.id = id;
 		this.valoracion = valoracion;
-
+		this.fechaPublicacion=fechaPublicacion;
 	}
 
-	public Show(String nombre, LocalDateTime fecha, int id) {
-		this(nombre, fecha, id, null);
+	public Show(String nombre, LocalDateTime fechaVisionado, int id,LocalDateTime fechaPublicacion) {
+		this(nombre, fechaVisionado, id, null,fechaPublicacion);
 
 	}
 
@@ -38,12 +39,13 @@ public abstract class Show {
 		this.nombre = nombre;
 	}
 
-	public LocalDateTime getFecha() {
-		return fecha;
+
+	public LocalDateTime getFechaVisionado() {
+		return fechaVisionado;
 	}
 
-	public void setFecha(LocalDateTime fecha) {
-		this.fecha = fecha;
+	public void setFechaVisionado(LocalDateTime fechaVisionado) {
+		this.fechaVisionado = fechaVisionado;
 	}
 
 	public int getValoracion() {
@@ -54,8 +56,12 @@ public abstract class Show {
 		this.valoracion = valoracion;
 	}
 
-	abstract public String mostrarDatos();
+	@Override
+	public String toString() {
+		return "Show [nombre=" + nombre + ", fechaVisionado=" + fechaVisionado + ", fechaPublicacion=" + fechaPublicacion + ", id=" + id
+				+ ", valoracion=" + valoracion + "]";
+	}
+
 	
-	abstract public String mostrarDatosYValoracion();
 
 }

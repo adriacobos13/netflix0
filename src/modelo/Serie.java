@@ -1,36 +1,35 @@
-package netflix0;
+package modelo;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
 public class Serie extends Show {
 	private String estudio;
-	private int temporadas;
+	private int numTemporadas;
 	private int[] valoraciones;
 
 	
 	
-	//metodos constructores
-	public Serie(String nombre, LocalDateTime fecha, int id, String estudio, int temporadas) {
-		super(nombre, fecha, id,id);
+	public Serie(String nombre, LocalDateTime fechaVisionado, int id, String estudio, int numTemporadas, LocalDateTime fechaPublicacion) {
+		super(nombre, fechaVisionado, id,fechaPublicacion);
 		this.estudio=estudio;
-		this.temporadas=temporadas;
+		this.numTemporadas=numTemporadas;
 	}
 
-	public Serie(String nombre, LocalDateTime fecha, int id,int[] valoraciones , String estudio, int temporadas) {
-		super(nombre, fecha,id,id);
+	public Serie(String nombre, LocalDateTime fechaVisionado, int id,int[] valoraciones , String estudio, int numTemporadas, LocalDateTime fechaPublicacion) {
+		super(nombre, fechaVisionado, id,fechaPublicacion);
 		this.estudio=estudio;
-		this.temporadas=temporadas;
+		this.numTemporadas=numTemporadas;
 		this.valoraciones=valoraciones;
 	}
 
-	public Serie(String nombre, LocalDateTime fecha, int id,int valoracion , String estudio, int temporadas) {
-		super(nombre, fecha,id,valoracion);
+	public Serie(String nombre, LocalDateTime fechaVisionado, int id,int valoracion , String estudio, int numTemporadas, LocalDateTime fechaPublicacion) {
+		super(nombre, fechaVisionado, id,fechaPublicacion);
 		this.estudio=estudio;
-		this.temporadas=temporadas;
+		this.numTemporadas=numTemporadas;
 		this.valoracion=valoracion;
 	}
-	//getters and setters de los atributos para cambiar los datos
-	//y acceder a ellos
+
 	public String getEstudio() {
 		return estudio;
 	}
@@ -40,11 +39,11 @@ public class Serie extends Show {
 	}
 
 	public int getTemporadas() {
-		return temporadas;
+		return numTemporadas;
 	}
 
-	public void setTemporadas(int temporadas) {
-		this.temporadas = temporadas;
+	public void setTemporadas(int numTemporadas) {
+		this.numTemporadas = numTemporadas;
 	}
 
 	public int[] getValoraciones() {
@@ -55,32 +54,17 @@ public class Serie extends Show {
 		this.valoraciones = valoraciones;
 	}
 
-
-	//mostramos datos con o sin valoracion o valoraciones
-	public String mostrarDatos() {
-		return "Nombre: "+nombre+ "\nFecha: "+fecha+
-				"\nId: "+id+"\nEstudio: "+estudio+
-				"\nTemporadas: "+temporadas;
-	}	
-	
-	
-	public String mostrarDatosYValoracion() {
-		return "Nombre: "+nombre+ "\nFecha: "+fecha+
-				"\nId: "+id+"\nestudio: "+estudio+
-				"\nTemporadas: "+temporadas+
-				"\nValoracion: "+valoracion;
-		
+	@Override
+	public String toString() {
+		return "Serie [estudio=" + estudio + ", numTemporadas=" + numTemporadas + ", valoraciones="
+				+ Arrays.toString(valoraciones) + ", nombre=" + nombre + ", fechaVisionado=" + fechaVisionado
+				+ ", fechaPublicacion=" + fechaPublicacion + ", id=" + id + ", valoracion=" + valoracion + "]";
 	}
-	
 
-	public String mostrarDatosYValoraciones() {
-		return "Nombre: "+nombre+ "\nFecha: "+fecha+
-				"\nId: "+id+"\nestudio: "+estudio+
-				"\nTemporadas: "+temporadas+
-				"\nValoraciones: "+valoraciones;
-		
-	}
-	
+
+
+
+
 
 	
 }

@@ -1,30 +1,28 @@
-package netflix0;
+package modelo;
 
 import java.time.LocalDateTime;
 
 public class Pelicula extends Show {
-	// atributos
-	private String director;
-	private String publicacion;
 
-	// Metodo constructor 1
-	public Pelicula(String nombre, LocalDateTime fecha, int id, String director, String publicacion, int valoracion) {
-		super(nombre, fecha, id, valoracion);
+	protected String director;
+
+	
+	public Pelicula(String nombre, LocalDateTime fechaVisionado, int id, String director, int valoracion, LocalDateTime fechaPublicacion) {
+		super(nombre, fechaVisionado, id, valoracion, fechaPublicacion);
 		this.director = director;
-		this.publicacion = publicacion;
+		
 
 	}
 
-	// Metodo constructor 2 sin valoracion
-	public Pelicula(String nombre, LocalDateTime fecha, int id, String director, String publicacion) {
-		super(nombre, fecha, id);
+	
+	public Pelicula(String nombre, LocalDateTime fechaVisionado, int id, String director, LocalDateTime fechaPublicacion) {
+		super(nombre, fechaVisionado, id, fechaPublicacion);
 		this.director = director;
-		this.publicacion = publicacion;
+	
 
 	}
 
-	// getters and setters de los atributos para cambiar los datos
-	// y acceder a ellos
+
 	public String getDirector() {
 		return director;
 	}
@@ -33,24 +31,16 @@ public class Pelicula extends Show {
 		this.director = director;
 	}
 
-	public String getPublicacion() {
-		return publicacion;
+
+	@Override
+	public String toString() {
+		return "Pelicula [director=" + director + ", nombre=" + nombre + ", fechaVisionado=" + fechaVisionado + ", fechaPublicacion="
+				+ fechaPublicacion + ", id=" + id + ", valoracion=" + valoracion + "]";
 	}
 
-	public void setPublicacion(String publicacion) {
-		this.publicacion = publicacion;
-	}
 
-	// mostramos datos con o sin valoracion
-	public String mostrarDatos() {
-		return "Nombre: " + nombre + "\nFecha: " + fecha + "\nId: " + id + "\nDirector: " + director + "\nPublicacion: "
-				+ publicacion;
-	}
 
-	public String mostrarDatosYValoracion() {
-		return "Nombre: " + nombre + "\nFecha: " + fecha + "\nId: " + id + "\nDirector: " + director + "\nPublicacion: "
-				+ publicacion + "\nValoracion: " + valoracion;
 
-	}
+	
 
 }
